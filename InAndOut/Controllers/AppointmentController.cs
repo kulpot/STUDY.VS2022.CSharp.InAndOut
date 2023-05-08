@@ -21,5 +21,12 @@ namespace InAndOut.Controllers
         {
             return Ok("The value : " + values + " is from Query string");
         }
+
+        [HttpPost]
+
+        public IActionResult Post([FromHeader] string parentRequestId)
+        {
+            return Ok($"Got a header with parentRequestId: {parentRequestId}!");
+        }
     }
 }
