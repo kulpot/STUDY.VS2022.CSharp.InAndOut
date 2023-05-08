@@ -1,4 +1,4 @@
-﻿// ref----https://www.youtube.com/watch?v=DqD-NJf7-OM&list=PLV7gcRAhaSFvl9u1Cup5DhYMEo8uyi7-r&index=72&t=37s
+﻿// 3hrs vid for noob ref----https://www.youtube.com/watch?v=DqD-NJf7-OM&list=PLV7gcRAhaSFvl9u1Cup5DhYMEo8uyi7-r&index=72&t=37s
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
