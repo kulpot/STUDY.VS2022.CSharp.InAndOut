@@ -16,5 +16,10 @@ namespace InAndOut.Controllers
         {
             return Ok("You have entered id = " + id);
         }
+
+        public IActionResult GetSomeData([FromQuery]string values)
+        {
+            return Ok("The value : " + values + " is from Query string");
+        }
     }
 }

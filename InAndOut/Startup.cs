@@ -49,6 +49,11 @@ namespace InAndOut
             app.UseEndpoints(endpoints =>//MVC endpoint
             {
                 endpoints.MapControllerRoute(
+                    name: "blog",
+                    pattern: "blog/{article}",
+                    defaults: new { controller = "Blog", action = "Article" });
+
+                endpoints.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
             });
