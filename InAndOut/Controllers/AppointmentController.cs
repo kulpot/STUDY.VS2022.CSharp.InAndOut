@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Exchange.WebServices.Data;
 using System;
 
 namespace InAndOut.Controllers
@@ -27,6 +28,13 @@ namespace InAndOut.Controllers
         public IActionResult Post([FromHeader] string parentRequestId)
         {
             return Ok($"Got a header with parentRequestId: {parentRequestId}!");
+        }
+
+        [HttpPost]
+
+        public IActionResult AddAppointment([FromBody] Appointment appointment)
+        {
+            return Ok(appointment);
         }
     }
 }
