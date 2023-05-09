@@ -36,5 +36,12 @@ namespace InAndOut.Controllers
         {
             return Ok(appointment);
         }
+
+        [HttpPost]
+
+        public IActionResult SaveFile([FromBody] string filename, [FromForm] IFormFile file)
+        {
+            return Ok("Success");
+        }
     }
 }
