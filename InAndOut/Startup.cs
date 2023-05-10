@@ -1,7 +1,9 @@
 ﻿// 3hrs vid for noob ref----https://www.youtube.com/watch?v=DqD-NJf7-OM&list=PLV7gcRAhaSFvl9u1Cup5DhYMEo8uyi7-r&index=72&t=37s
+using InAndOut.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -22,6 +24,10 @@ namespace InAndOut
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
+            );
+
             services.AddControllersWithViews();
         }
 

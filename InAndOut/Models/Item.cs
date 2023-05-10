@@ -9,6 +9,7 @@ namespace InAndOut.Models
 {
     public class Item
     {
+        //[System.ComponentModel.DataAnnotations.Key]
         [Key]
         public int Id { get; set; }
         public string Borrower { get; set; }
